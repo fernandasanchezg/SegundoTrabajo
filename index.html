@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Juego Carlos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <style>
-    #btnUpdate {
-      display: none;
-    }
-  </style>
+    <meta charset="utf-8" />
+    <title>Nuestro sitio web de Bootstrap</title>
+
+    <!--- Enlace para Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS propios -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Biblioteca de JS para simular efecto con scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script> 
+
 
 </head>
-
 <body>
-  Estudiantes
 
-  <form action="javascript:void(0);">
-    <input type="hidden" id="studentId">
-    <input type="text" id="studentName" placeholder="Nombre del estudiante">
+    <!-- Navegacion para adaptar a celucos-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <!-- Centrar contenido con la clase container -->
+        <div class="container">
+                <a class="navbar-brand" href="#">Falcao García</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Margin left auto, desplaza hacia la derecha -->
+                  <ul class="navbar-nav ml-auto "> 
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#bio"> Biografía <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#info-muerte">Muerte de su padre</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#info-equipos">Equipos</a>
+                    </li>
+                  </ul>
+                </div>
+        </div>   
+        </nav>
 
-    <input type="submit" id="btnNew" value="Nuevo" onclick="add()">
-    <input type="button" id="btnUpdate" value="Guardar" onclick="update()">
-  </form>
-
-
-
-  <table>
-    <tbody id="students">
-    </tbody>
-  </table>
-
-  <script src="script.js"></script>
-
-</body>
-
-</html>
+    
+</body> 
+});
