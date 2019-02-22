@@ -9,7 +9,7 @@
      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- CSS propios -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Style.css">
 
     <!-- Biblioteca de JS para simular efecto con scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script> 
@@ -41,7 +41,7 @@
                   </ul>
                 </div>
         </div>   
-        </nav>
+      </nav>
     
 <!-- Cabecera -->
 <header id="bio">
@@ -149,9 +149,22 @@
         distance: '300px',
         viewFactor: 0.8
       })
+      sr.reveal('#info-muerte', {
+        duration: 1000,
+        origin: 'right',
+        distance: '350px',
+        viewFactor: 0.8
+      })
+
+      sr.reveal('.info-right', {
+        duration: 1000,
+        origin: 'bottom',
+        distance: '350px',
+        viewFactor: 0.8
+      })
           // Esta parte es para deslizar mas bonito cuando le damos en el botn que nos lleva a otra seccion
           document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
