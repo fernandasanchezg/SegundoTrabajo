@@ -151,3 +151,19 @@
         distance: '300px',
         viewFactor: 0.8
       })
+          // Esta parte es para deslizar mas bonito cuando le damos en el botn que nos lleva a otra seccion
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+    </script>
+</body>
+</html>
